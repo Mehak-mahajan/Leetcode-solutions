@@ -34,6 +34,7 @@ class Solution {
         }
 
     }
+
     private boolean isPalindrome(String s, int left, int right) {
         while (left < right) {
             if (s.charAt(left) != s.charAt(right)) {
@@ -45,3 +46,4 @@ class Solution {
         return true;
     }
 }
+// Time complexity: O(N*2^N) where N is the length of the string. In the worst case, we have to explore all possible partitions of the string, which can be 2^(N-1) (each character can either be a partition or not). Additionally, checking if a substring is a palindrome takes O(N) time in the worst case.
